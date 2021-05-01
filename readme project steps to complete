@@ -1,3 +1,160 @@
 This is a project Planning document for adding instructions
+Students of Swift,
+ADD DESCRIPTION OF YOUR APP HERE FOR PROJECT PLANNING
+We'll be creating a  App using Cloud Firestore, Google Authentication, and Firebase Storage. My app allows students that like music to link musicians to jam together or have a party and invite musicians to join.
 
-1) Set up the
+
+APP SETUP INSTRUCTIONS
+Launch Xcode and create an App called "BCJam". It must be spelled & capitalized exactly like this, or the Podfile you just downloaded won't work. The App should be a standard UIKit Swift app type we normally use in class.
+INSTALL PODFILES
+Mdify the podfile to work with your app //use the one from snactackular or hackathon
+Set up the pods for firebase and google data access
+Open the Terminal program
+Type cd then drag in the folder title from "Hackathon" that you find in the finder. This will change directories to the Hackthon folder, just as you've done every other time you've installed Cocoapods.
+You can verify you're in the right place with an ls command. This should list all the files in this folder and one should be Podfile.
+First, let's create a .gitignore to ignore the APIKeys.swift file we're going to eventually create. At the terminal prompt, type:
+nano .gitignore
+Enter the two filenames, below - these will ensure that these two files, containing project key information, aren't uploaded to GitHub:
+APIKeys.swift
+GoogleService-Info.plist
+Quit nano by typing:
+CTRL-X, Y, Return
+Enter
+pod install
+the podfiles will install. This could take a bit of time (it took five minutes on my Intel MacBook Pro, running from my Home Wi-Fi Network), but you can begin creating the Firebase Hackathon Project using the steps, below, while pods install.
+Once pods are installed you can quit Xcode.
+
+CREATE FIREBASE PROJECT
+see instructions below
+
+
+SETUP YOUR STORYBOARD
+Set up the storyboard in BCJam story board. this will help create the data model and view. then we focus on the controllers and how to program app logic
+Get a picure for your logo and the icon.
+
+CREATE YOUR MODELS IN CLASSES
+
+
+START CODING VIEW CONTROLLERS STARTING WITH YOUR USERS AND THEIR PROFILE
+
+
+
+
+
+
+
+
+//USE FOR SETTING UP THE BASE APP STRUCTURES
+PREPARE FOR HACKATHON APP CLASS
+
+URL for this file: http://bit.ly/hackathon-app-setup
+
+URL for accompanying step-by-step YouTube video:
+https://youtu.be/k4kpf6jauVg
+
+Students of Swift,
+We'll be creating a Hackathon App using Cloud Firestore, Google Authentication, and Firebase Storage. To prep for the class, do some up-front work so we'll be ready to code as soon as you arrive in class:
+
+DOWNLOAD FILES AT THIS URL:
+
+https://bit.ly/prof-g-swift-files
+Specifically download the files in the folder "Hackathon App Files". You'll find a logo.png file and a Podfile in there.
+
+FIRST- CREATE A HACKATHON APP IN XCODE
+
+Launch Xcode and create an App called "Hackathon". It must be spelled & capitalized exactly like this, or the Podfile you just downloaded won't work. The App should be a standard UIKit Swift app type we normally use in class.
+Drag the logo.png file into your Assets Catalog
+Quit Xcode
+
+INSTALL PODFILES
+Drag the Podfile you just downloaded into the first level of the Hackathon folder.
+Open the Terminal program
+Type cd then drag in the folder title from "Hackathon" that you find in the finder. This will change directories to the Hackthon folder, just as you've done every other time you've installed Cocoapods.
+You can verify you're in the right place with an ls command. This should list all the files in this folder and one should be Podfile.
+First, let's create a .gitignore to ignore the APIKeys.swift file we're going to eventually create. At the terminal prompt, type:
+nano .gitignore
+Enter the two filenames, below - these will ensure that these two files, containing project key information, aren't uploaded to GitHub:
+APIKeys.swift
+GoogleService-Info.plist
+Quit nano by typing:
+CTRL-X, Y, Return
+Enter
+pod install
+the podfiles will install. This could take a bit of time (it took five minutes on my Intel MacBook Pro, running from my Home Wi-Fi Network), but you can begin creating the Firebase Hackathon Project using the steps, below, while pods install.
+Once pods are installed you can quit Xcode.
+
+CREATE THE FIREBASE HACKATHON PROJECT
+Head to the firebase console in your browser by going to this url:
+https://console.firebase.google.com/
+The main screen will list your projects. Create a new project by clicking the "+" icon.
+Enter the project name as "Hackathon", click Continue
+Turn OFF "Enable Google Analytics for this project". We don't need that and it'll just add to our project's size.
+Click "Create Project". A provisioning resources circle should fill in and your project will be "provisioned" in a minute or two.
+When you see "Your New Project is Ready", click "Continue"
+On the "Getting Started using Firebase in your App" page, click the iOS icon.
+
+ONCE PODS HAVE BEEN INSTALLED
+Quit Terminal if you haven't already
+Open your Hackathon project via the .xcworkspace file.
+Find and copy the Bundle Identifier. You can find this by clicking the blue Hackathon icon at the top of the Project Navigator, Looking under Targets > General (which is likely already open), and finding this field on the screen - 2nd item down.
+Return to your browse and paste this into the field labeled "iOS Bundle ID" under "Register App".
+For App Nickname, enter "Hackathon"
+Click the "Register App" button.
+Click the blue button to download the "GoogleService-Info.plist" file. Save it someplace where you can easily find it. Inside the root level of your project is a good space.
+Return to the finder and find the file you just downloaded
+VERY IMPORTANT - if Google added a number to the end of this file, like (1), MAKE SURE the file is named exactly as intended:
+GoogleService-Info.plist
+If you're sure the file is named properly, drag this file into the Xcode project navigator. I usually drop this file right below info.plist toward the end of the files listed in the project navigator's "Hackathon" folder.
+Click "Finish" when you release the file into your project navigator.
+In the browser, click "Next". This page is about installing cocoapods, but we've already done this.
+Click "Next" again.
+As indicated, return to Xcode, open AppDelegate.swift, and
+import Firebase
+Also as indicated in the browser page, return to AppDelegate.swift, and in the first function, before the "return true" statement, add the statement:
+FirebaseApp.configure()
+Return to the browser, click "Continue to Console"
+
+CONFIGURE INFO FROM THE GOOGLESERVICE-INFO.PLIST
+Return to Xcode and open GoogleService-Info.plist in the project manager.
+The third row down is called "REVISED_CLIENT_ID", double click in the Value field of this row, highlight and copy the entire key. It should be something like:
+com.googleusercontent.apps.followed-by-a-really-long-number-letter-combo
+Click the blue "Hackathon" icon at the top of your Project Navigator.
+With "Targets" selected, select the "Info" tab.
+Click the exposure triangle below "URL Types" so that you see a "+" icon. Click that icon.
+Find the URL Schemes field and paste in the value that you copied above. Press return.
+At this point you've set up a Firebase project named Hackathon, and you've created and configured an Xcode project to work with this cloud-based Firebase project.
+
+CREATE AN APIKeys.swift FILE TO HOLD YOUR GOOGLE PLACES API KEY
+First, in Xcode, create a file to hold your Google Places API key and call this:
+APIKeys.swift
+This should be the EXACT same name with the EXACT same spelling as you used in .gitignore, above.
+Copy the text below and paste it into your APIKeys.swift file.
+struct APIKeys {
+    static let googlePlacesKey = "YOUR_API_KEY_HERE"
+}
+Open AppDelegate.swift, and just before return true in the first function. paste in the code, below:
+GMSPlacesClient.provideAPIKey(APIKeys.googlePlacesKey)
+also import GooglePlaces with the following line under the other import statements:
+import GooglePlaces
+
+FINALLY - ADD GOOGLE PLACES API SUPPORT FOR YOUR PROJECT.
+In the browser, enter the URL below to head to the Console for the Google Cloud platform - note this is a different console from the one we just used for Firebase:
+https://console.cloud.google.com/
+
+To make things easy, we'll reuse our API key from Weathergift, but let's first make sure that project is configured to allow Hackathon to use the key, as well.
+Select "WeatherGift" from the pulldown at the top of the screen that lists your projects.
+Click "-> Go to APIs Overview" from this screen (middle-ish, part way down).
+Click "Credentials" on the left.
+Under API Keys you should see the Key you named when you created WeatherGift. Mine is called "WeatherGift API Key". Whatever yours is, copy the key by clicking the copy icon (which looks like one rectangle on top of another, far right of this line.
+Return to the Hackathon Project's APIKeys.swift file and paste the key over top of the contents of the String labeled YOUR_API_KEY_HERE
+Now be sure the API Key will work with the Hackathon project, too:
+In the browser, click the name of the API key (e.g. mine is named "WeatherGift API Key"). This should bring up the page where you set Key Restrictions.
+App Restrictions should have iOS Apps clicked.
+Under "Accept requests from an iOS application with one of these bundle identifiers", click "ADD AN ITEM"
+Return to your Xcode project, find the Bundle ID (Hackathon blue icon, Targets > General tab, the under "Bundle Identifier". Copy it. Return the browser and paste it into the Bundle ID field. The field will turn from red to blue.
+Click Done.
+Under API Restrictions, select "Don't Restrict Key"
+Click "Save"
+
+That's it!
+
