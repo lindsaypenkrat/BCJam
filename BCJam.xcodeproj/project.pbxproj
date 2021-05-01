@@ -15,6 +15,7 @@
 		C34930C4263C824100C4083E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34930C2263C824100C4083E /* LaunchScreen.storyboard */; };
 		C34930CC263C829200C4083E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34930CB263C829200C4083E /* User.swift */; };
 		C34930CE263C829A00C4083E /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34930CD263C829A00C4083E /* Users.swift */; };
+		FAC061A4263C92D600D93D07 /* bcjam.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC061A6263C92D600D93D07 /* bcjam.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C34930C5263C824100C4083E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C34930CB263C829200C4083E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C34930CD263C829A00C4083E /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		FAC061A5263C92D600D93D07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/bcjam.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				C34930CD263C829A00C4083E /* Users.swift */,
 				C34930BB263C824100C4083E /* ViewController.swift */,
 				C34930BD263C824100C4083E /* Main.storyboard */,
+				FAC061A6263C92D600D93D07 /* bcjam.storyboard */,
 				C34930C0263C824100C4083E /* Assets.xcassets */,
 				C34930C2263C824100C4083E /* LaunchScreen.storyboard */,
 				C34930C5263C824100C4083E /* Info.plist */,
@@ -130,6 +133,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC061A4263C92D600D93D07 /* bcjam.storyboard in Resources */,
 				C34930C4263C824100C4083E /* LaunchScreen.storyboard in Resources */,
 				C34930C1263C824100C4083E /* Assets.xcassets in Resources */,
 				C34930BF263C824100C4083E /* Main.storyboard in Resources */,
@@ -168,6 +172,14 @@
 				C34930C3263C824100C4083E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FAC061A6263C92D600D93D07 /* bcjam.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAC061A5263C92D600D93D07 /* Base */,
+			);
+			name = bcjam.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
